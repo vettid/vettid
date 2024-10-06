@@ -382,16 +382,16 @@ NKey and URI are packaged as a QR Code or link that can be shared
    1. Alice’s Manager Service gets the message, evaluates it and passes it to Connection Event Handler
       1. Alice’s Connection Event Handler gets the message and posts a connection complete message encrypted using the Connection public key to the Bob’s subscriber.guid.eventspace
 1. **Send a Message Activity**
-
+   1. WIP
 1. **Create a Rule Activity**
-
+   1. WIP
 1. **Make a Request Activity**
-
+   1. WIP
 1. **Perform a Transaction Activity**
-
+   1. WIP
 1. **Rotate Nkeys Activity**
-
+   1. WIP
 1. **Rotate Connection Key Pair Activity**
-
+   1. WIP
 
 

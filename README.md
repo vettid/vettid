@@ -1,16 +1,14 @@
-### Hi there 👋
+Here is the initial design for VettID. There are more activities to be documented but the materials below should provide enough to begin coding. I will continue documenting the activities until the core functionality is complete. If you are interested in contributing to VettID please contact info@vettid.org. I’m a lone person with a full time job so I can use the help!
 
-<!--
-**vettid/vettid** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+All the best
 
-Here are some ideas to get you started:
+Contents:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- System Diagram
+
+- Lexicon
+
+- Design Notes
+
+- Activities
+

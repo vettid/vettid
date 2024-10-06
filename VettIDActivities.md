@@ -256,8 +256,8 @@
                   1. OwnerSpace Event Watcher retrieves the message, decrypts it and writes it to DataVault.Queue
                      1. Manager Service gets the message and passes it to the Authentication Event Handler
                         1. Credential is encrypted using a new Credential key pair
-1. new Credential private key stored in Manager kv store
-1. new VettID Credential is written to OwnerSpace.Feed.Objectstore
+                        1. new Credential private key stored in Manager kv store
+                        1. new VettID Credential is written to OwnerSpace.Feed.Objectstore
    1. posts a connected message to OwnerSpace.Feed along with location of new the new VettID Credential encrypted with the new VettID Owner public key
    1. stops OwnerSpace.Auth Event Watcher
    1. VettID app retrieves the message, decrypts it and shows the user as connected in the app
@@ -336,19 +336,17 @@
          1. adds connection data to Connection namespace
          1. encrypts the connection NKey and EventSpace URI with the VettID App public key and posts it to OwnerSpace.Feed
       1. VettID App gets the message and decrypts it
-         1. Alice is asked how she would like to share the invitation
+         1. Alice is asked how she would like to share the invitation - NKey and URI are packaged as a QR Code or link that can be shared
 
-NKey and URI are packaged as a QR Code or link that can be shared
-
-1. Alice shares with Bob
-1. Bob takes a photo of the QR code (or connection user clicks the link)
-   1. QR Code (or link) launches VettID App and asks if Bob would like to accept the invitation
-   1. Bob selects yes
-      1. Bob’s VettID app generates an add connection message (includes Nkey and URI), encrypted with the connection’s Data Vault public key and posts it to the Bobs OwnerSpace.Queue
-      1. Bob’s OwnerSpace Event Watcher gets the message, decrypts it and writes it to Bob’s DataVault.Queue
-      1. Bob’s Manager Service gets the message, evaluates the event type and launches a Connection Event Handler
-         1. Connection Event Handler stores the NKey and URI in the Connection namespace
-         1. Connection Event handler uses the NKey to collect the Alice’s profile, encrypts it with the Bob’s VettID App public key and writes it to the Bob’s OwnerSpace.Feed
+   1. Alice shares with Bob
+   1. Bob takes a photo of the QR code (or connection user clicks the link)
+      1. QR Code (or link) launches VettID App and asks if Bob would like to accept the invitation
+      1. Bob selects yes
+         1. Bob’s VettID app generates an add connection message (includes Nkey and URI), encrypted with the connection’s Data Vault public key and posts it to the Bobs OwnerSpace.Queue
+         1. Bob’s OwnerSpace Event Watcher gets the message, decrypts it and writes it to Bob’s DataVault.Queue
+         1. Bob’s Manager Service gets the message, evaluates the event type and launches a Connection Event Handler
+            1. Connection Event Handler stores the NKey and URI in the Connection namespace
+            1. Connection Event handler uses the NKey to collect the Alice’s profile, encrypts it with the Bob’s VettID App public key and writes it to the Bob’s OwnerSpace.Feed
       1. Bob’s VettID App gets the event, decrypts it and presents it to Bob
          1. Bob evaluates the user’s profile and decides if he wants to accept the connection
          1. Bob accepts the connection and Bob’s VettID App writes a connection accepted message, encrypts it with the Bob’s Data Vault public key and writes it to the Bob’s OwnerSpace.Queue

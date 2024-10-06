@@ -1,6 +1,6 @@
-1.  VettID Lexicon
+1.  **VettID Lexicon**
 
-    1.  **Action **-- Actions are atomic serverless functions, scripts
+    1.  **Action**-- Actions are atomic serverless functions, scripts
         or executables that perform a single task.
     2.  **App Manager Service** -- The App Manager Service is the
         Manager Service for an AppSpace. It monitors AppSpace.Queue for
@@ -9,7 +9,7 @@
     3.  **AppSpace** -- AppSpace is the EventSpace for cloud based
         applications. Users of a cloud based application use the
         AppSpace to deliver External Events to the application.
-    4.  **AppSpace Cluster **-- A Kubernetes based application that
+    4.  **AppSpace Cluster**-- A Kubernetes based application that
         provides a combination of the EventSpace and Data Vault
         functionality for cloud based applications. It provides an API
         for integration in lieu of the VettID Mobile App.
@@ -23,7 +23,7 @@
         should be enabled to block all incoming connections. SSH may be
         exempted. It runs NATS server with JetStream enabled and the
         Manager Service.
-    7.  **Event Handler **-- An Event Handler defines and executes the
+    7.  **Event Handler**-- An Event Handler defines and executes the
         workflow for processing a specific event type. Event Handlers
         invoke Actions to perform steps in the workflow and can use the
         Event Handler namespace to share data between Actions or
@@ -39,13 +39,13 @@
         Subscriber namespaces may be created as long as resources allow.
     10. **Event Type** -- Defines the Event Handler required to process
         the event.
-    11. **Event Watcher **-- An Event Watcher is launched by a Manager,
+    11. **Event Watcher**-- An Event Watcher is launched by a Manager,
         App Manager or Concierge Service to monitor a NATS namespace for
         new External Events. When new External Events are received the
         Event Watcher pulls the appropriate private key based on the
         keyID, decrypts the External Event and writes an Internal Event
         to the Queue.
-    12. **External Event **-- External Events are comprised of a keyID
+    12. **External Event**-- External Events are comprised of a keyID
         and an encrypted JSON object. The JSON object is encrypted using
         a connection specific public key identified by the keyID. The
         JSON object must include a timestamp, connection ID Event Type,

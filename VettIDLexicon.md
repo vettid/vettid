@@ -33,7 +33,7 @@
         receives a NATS NKey which allows write access. Every EventSpace
         must have a Profile and a topic where connections can deposit
         External Events for the owner.
-    9.  **EventSpace Server **-- Software deployed onto an Ubuntu server
+    9.  **EventSpace Server**-- Software deployed onto an Ubuntu server
         that is Internet accessible. An admin account is used to
         create/remove unique NATS Subscriber namespaces. Any number of
         Subscriber namespaces may be created as long as resources allow.

@@ -87,7 +87,7 @@
         connection to that EventSpace. Owners can create multiple
         profiles but only one may be applied to an EventSpace. Every
         Profile must include a public key, a list of supported Event
-        Types, first name, age, state and country at a minimum.
+        Types, first name, age, and location (e.g. city, state or province) at a minimum.
     21. **Queue** -- NATS topics that exist on the Data Vault,
         EventSpace Server and AppSpace Cluster that are used to trigger
         Event Handlers or pass Internal Events to a running Event
